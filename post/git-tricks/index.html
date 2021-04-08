@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>Git tricks - xiezhiqiang</title>
+        <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content=""/>
+        <meta name="twitter:description" content="This is My New Hugo Site"/>
+        <meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Git tricks" />
+<meta property="og:description" content="[TOC]
+git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地
+git status 查看上次是否有修改 1  git status   status 具体内容：
+1 2 3 4 5 6 7  On branch serial0 Changes not staged for commit: (use &#34;git add &lt;file&gt;...&#34; to update what will be committed) (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory) modified: test_resnet.py no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)   git diff 查看文件具体修改的不同之处 1 2  git checkout ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzhws.github.io/post/git-tricks/" /><meta property="og:image" content="https://xzhws.github.io/logo.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-02-28T13:03:42&#43;08:00" />
+<meta property="article:modified_time" content="2021-02-28T13:03:42&#43;08:00" />
+
+<meta name="application-name" content="xiezhiqiang">
+<meta name="apple-mobile-web-app-title" content="xiezhiqiang"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xzhws.github.io/post/git-tricks/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Git tricks",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xzhws.github.io\/post\/git-tricks\/"
+        },"genre": "post","wordCount":  151 ,
+        "url": "https:\/\/xzhws.github.io\/post\/git-tricks\/","datePublished": "2021-02-28T13:03:42+08:00","dateModified": "2021-02-28T13:03:42+08:00","description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="xiezhiqiang" class="header-logo logo-svg">xiezhiqiang&#39;s blog</a>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul class="menu-inner"><li>
+                        <a class="menu-item" href="/post/"> Posts </a>
+                    </li><li>
+                        <a class="menu-item" href="/tags/"> Tags </a>
+                    </li><li>
+                        <a class="menu-item" href="/categories/"> Categories </a>
+                    </li><li>
+                        <a class="menu-item" href="/post/toc_test.md"> About </a>
+                    </li></ul>
+            </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <span class="svg-icon icon-moon"></span>
+                </a>
+            </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="xiezhiqiang" class="header-logo">xiezhiqiang&#39;s blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><nav>
+                <ul><li>
+                        <a class="menu-item" href="/post/" title="">Posts</a>
+                    </li><li>
+                        <a class="menu-item" href="/tags/" title="">Tags</a>
+                    </li><li>
+                        <a class="menu-item" href="/categories/" title="">Categories</a>
+                    </li><li>
+                        <a class="menu-item" href="/post/toc_test.md" title="">About</a>
+                    </li></ul>
+            </nav>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <span class="svg-icon icon-moon"></span>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title pulse faster">Git tricks</h1><div class="content" id="content"><p>[TOC]</p>
+<h3 id="git-branch-切换分支">git branch 切换分支</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git branch  <span class="c1">#查看本地分支</span>
+git branch -r  <span class="c1">#查看远程分支（注意切换到对应的文件夹，与远程分支对应）</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地</p>
+<h3 id="git-status-查看上次是否有修改">git status 查看上次是否有修改</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git status         
+</code></pre></td></tr></table>
+</div>
+</div><p>status 具体内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">On branch serial0
+Changes not staged for commit:
+  (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
+  (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory)
+        modified:   test_resnet.py
+
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="git-diff-查看文件具体修改的不同之处">git diff 查看文件具体修改的不同之处</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git checkout .  <span class="c1">#舍弃之前的修改</span>
+git checkout  <span class="c1">#命令用于切换分支或恢复工作树文件（在checkout某个文件时会覆盖修改的内容 这一点需要注意）</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="注释上传新文件">注释上传新文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git add ***.py
+git commit -m <span class="s2">&#34;message&#34;</span> 
+git push <span class="c1">#上传被注释的所有文件</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>之后在git的CI上面检查pipline 是否通过</p>
+<h3 id="提merge-request流程">提Merge Request流程</h3>
+<ol>
+<li>首先检查上一步的pipline是否已经完全通过</li>
+<li>然后呢在MR的右边把merge的流程assign给mentor</li>
+</ol>
+<h3 id="git-ci-分配容器">git CI 分配容器</h3>
+<p>每次开一个新仓库或者git push 后触发了pipline，需要在gitlab 的setting-&gt;member 里面提交容器的申请</p>
+<h3 id="主仓库的版本更新后更新本地的代码">主仓库的版本更新后，更新本地的代码</h3>
+<p>当上一个版本的代码更新后
+更新本地的master和git仓库的master一致，可以参考方法
+<a href="https://www.jianshu.com/p/4c1d3b741b19">https://www.jianshu.com/p/4c1d3b741b19</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git remote -v <span class="c1">#查看远程仓库</span>
+git fetch origin master:temp <span class="c1">#从远程的origin仓库 把代码pull到本地master的tmp分支上面</span>
+git diff temp <span class="c1"># 查看本地分支 和tmp分支的不同</span>
+git merge temp <span class="c1"># 将tmp分支与本地的master分支合并</span>
+git branch -d temp <span class="c1"># 删除一下已经创建的tmp分支</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div id="comments"><div id="fb-root" class="comment"></div>
+            <div
+                class="fb-comments"
+                data-href="https://xzhws.github.io/post/git-tricks/"
+                data-width="100%"
+                data-numposts="10"
+            ></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://developers.facebook.com/docs/plugins/comments/"></a>Facebook</a>.
+            </noscript></div></div></div>
+                </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.82.0">Hugo</a> 强力驱动 | 主题 - <a href="https://ublogger.netlify.app/?utm_source=https://xzhws.github.io/&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+                </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2019 - 2021</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="svg-icon icon-arrow-up"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="svg-icon icon-comments-fixed"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&amp;version=v5.0&amp;appId=&amp;autoLogAppEvents=1" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js"></script></body>
+</html>

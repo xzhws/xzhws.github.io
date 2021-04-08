@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on xzhws&#39; blog</title>
-    <link>/categories/</link>
-    <description>xzhws&#39; blog (Categories)</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - 分类 - xiezhiqiang&#39;s blog</title>
+        <link>https://xzhws.github.io/categories/</link>
+        <description>Categories - 分类 - xiezhiqiang&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://xzhws.github.io/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>
