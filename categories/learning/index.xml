@@ -17,7 +17,7 @@
     <pubDate>Sun, 28 Feb 2021 13:03:42 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://xzhws.github.io/post/git-tricks/</guid>
-    <description><![CDATA[git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地
+    <description><![CDATA[git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支，而是在远程创建分支，然后git pull到本地
 git status 查看上次是否有修改 1  git status   status 具体内容：
 1 2 3 4 5 6 7  On branch serial0 Changes not staged for commit: (use &#34;git add &lt;file&gt;...&#34; to update what will be committed) (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory) modified: test_resnet.py no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)   git diff 查看文件具体修改的不同之处 1 2  git checkout .]]></description>
 </item></channel>
