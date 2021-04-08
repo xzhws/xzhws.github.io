@@ -1,2 +1,1 @@
-# xzhws.github.io
-personal blog
+xie zhiqiang's blog. 
