@@ -7,7 +7,7 @@
         <meta name="twitter:description" content="This is My New Hugo Site"/>
         <meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Algorithm" />
 <meta property="og:description" content="已完成
- 遇到大整数乘法取模，优先开long long，不然乘法容易爆int。int 4个字节，long 8个字节， long long 16个字节，就算两个int的最大值相乘也不过8个字节，所以开long或者long long足够解决溢出的问题。==再不行记得开unsigned long long== 多行输出，一定要注意数组，变量的重新初始化！！！ 字符串处理时最差时间复杂度注意：子串(最差复杂度O(N^2)) 与子序列（最差复杂度O(2^N)） $\sum_{i=1}^{5}$ c&#43;&#43;特定字符串分隔字符stringstream （while(getline(ss,tmp,&#39;/&#39;))） 位运算: mask&amp;(-mask) 可以取到mask右边第一个非0的二进制的位置; 负数的补码：反码（符号位不变）&#43;1 KMP 算法求最短循环节时，注意把最长公共前后缀字符数组D先求出来，然后观察D与要求的内容（比如最小循环节的关系, len-D(len)) 回文字符串的一个特征：假设回文串为P，那么字符串P&#43;&#39;#&#39;&#43;reverse(P) 与KMP 的关系为: D[len-1]=P.length() 滑动窗口模板 题目：leetcode 713. 乘积小于K的子数组  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution { public: //滑动窗口模板题  int numSubarrayProductLessThanK(vector&lt;int&gt;&amp; nums, int k) { int n=nums." />
+ 遇到大整数乘法取模，优先开long long，不然乘法容易爆int。int 4个字节，long 8个字节， long long 16个字节，就算两个int的最大值相乘也不过8个字节，所以开long或者long long足够解决溢出的问题。==再不行记得开unsigned long long== 多行输出，一定要注意数组，变量的重新初始化！！！ 字符串处理时最差时间复杂度注意：子串(最差复杂度O(N^2)) 与子序列（最差复杂度O(2^N)） c&#43;&#43;特定字符串分隔字符stringstream （while(getline(ss,tmp,&#39;/&#39;))） 位运算: mask&amp;(-mask) 可以取到mask右边第一个非0的二进制的位置; 负数的补码：反码（符号位不变）&#43;1 KMP 算法求最短循环节时，注意把最长公共前后缀字符数组D先求出来，然后观察D与要求的内容（比如最小循环节的关系, len-D(len)) 回文字符串的一个特征：假设回文串为P，那么字符串P&#43;&#39;#&#39;&#43;reverse(P) 与KMP 的关系为: D[len-1]=P.length() 滑动窗口模板 题目：leetcode 713. 乘积小于K的子数组  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution { public: //滑动窗口模板题  int numSubarrayProductLessThanK(vector&lt;int&gt;&amp; nums, int k) { int n=nums." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xzhws.github.io/post/algorithm/" /><meta property="og:image" content="https://xzhws.github.io/logo.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-04-07T21:56:35&#43;08:00" />
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xzhws.github.io\/post\/algorithm\/"
-        },"genre": "post","keywords": "algorithm","wordCount":  1890 ,
+        },"genre": "post","keywords": "algorithm","wordCount":  1889 ,
         "url": "https:\/\/xzhws.github.io\/post\/algorithm\/","datePublished": "2021-04-07T21:56:35+08:00","dateModified": "2021-04-07T21:56:35+08:00","description": ""
     }
     </script><script type="application/ld+json">
@@ -67,7 +67,7 @@
                     </li><li>
                         <a class="menu-item" href="/categories/"> Categories </a>
                     </li><li>
-                        <a class="menu-item" href="/post/toc_test.md"> About </a>
+                        <a class="menu-item" href="/about/"> About </a>
                     </li></ul>
             </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <span class="svg-icon icon-moon"></span>
@@ -92,7 +92,7 @@
                     </li><li>
                         <a class="menu-item" href="/categories/" title="">Categories</a>
                     </li><li>
-                        <a class="menu-item" href="/post/toc_test.md" title="">About</a>
+                        <a class="menu-item" href="/about/" title="">About</a>
                     </li></ul>
             </nav>
             <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
@@ -105,7 +105,6 @@
 <li>遇到大整数乘法取模，优先开long long，不然乘法容易爆int。int 4个字节，long 8个字节， long long 16个字节，就算两个int的最大值相乘也不过8个字节，所以开long或者long long足够解决溢出的问题。==再不行记得开unsigned long long==</li>
 <li>多行输出，一定要注意数组，变量的重新初始化！！！</li>
 <li>字符串处理时<strong>最差时间复杂度</strong>注意：<strong>子串</strong>(最差复杂度O(N^2)) 与<strong>子序列</strong>（最差复杂度O(2^N)）</li>
-<li>$\sum_{i=1}^{5}$</li>
 <li>c++特定字符串分隔字符stringstream （while(getline(ss,tmp,'/'))）</li>
 <li>位运算: mask&amp;(-mask) 可以取到mask右边第一个非0的二进制的位置; 负数的补码：反码（符号位不变）+1</li>
 <li>KMP 算法求最短循环节时，注意把最长公共前后缀字符数组D先求出来，然后观察D与要求的内容（比如最小循环节的关系, len-D(len))</li>

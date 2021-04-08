@@ -1,8 +1,6 @@
 # Git tricks
 
 
-[TOC]
-
 ### git branch 切换分支
 
 ``` bash

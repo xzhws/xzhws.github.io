@@ -6,8 +6,7 @@
         <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content=""/>
         <meta name="twitter:description" content="This is My New Hugo Site"/>
         <meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Git tricks" />
-<meta property="og:description" content="[TOC]
-git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地
+<meta property="og:description" content="git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地
 git status 查看上次是否有修改 1  git status   status 具体内容：
 1 2 3 4 5 6 7  On branch serial0 Changes not staged for commit: (use &#34;git add &lt;file&gt;...&#34; to update what will be committed) (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory) modified: test_resnet.py no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)   git diff 查看文件具体修改的不同之处 1 2  git checkout ." />
 <meta property="og:type" content="article" />
@@ -29,10 +28,30 @@ git status 查看上次是否有修改 1  git status   status 具体内容：
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xzhws.github.io\/post\/git-tricks\/"
-        },"genre": "post","wordCount":  151 ,
+        },"genre": "post","keywords": "tools","wordCount":  150 ,
         "url": "https:\/\/xzhws.github.io\/post\/git-tricks\/","datePublished": "2021-02-28T13:03:42+08:00","dateModified": "2021-02-28T13:03:42+08:00","description": ""
     }
-    </script></head>
+    </script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "主页",
+            "item": "https:\/\/xzhws.github.io\/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "learning",
+            "item": "https://xzhws.github.io/categories/learning/"
+        },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Git tricks"
+            }]
+    }
+</script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
@@ -49,7 +68,7 @@ git status 查看上次是否有修改 1  git status   status 具体内容：
                     </li><li>
                         <a class="menu-item" href="/categories/"> Categories </a>
                     </li><li>
-                        <a class="menu-item" href="/post/toc_test.md"> About </a>
+                        <a class="menu-item" href="/about/"> About </a>
                     </li></ul>
             </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <span class="svg-icon icon-moon"></span>
@@ -74,7 +93,7 @@ git status 查看上次是否有修改 1  git status   status 具体内容：
                     </li><li>
                         <a class="menu-item" href="/categories/" title="">Categories</a>
                     </li><li>
-                        <a class="menu-item" href="/post/toc_test.md" title="">About</a>
+                        <a class="menu-item" href="/about/" title="">About</a>
                     </li></ul>
             </nav>
             <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
@@ -82,8 +101,7 @@ git status 查看上次是否有修改 1  git status   status 具体内容：
             </a></div>
     </div>
 </header><main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title pulse faster">Git tricks</h1><div class="content" id="content"><p>[TOC]</p>
-<h3 id="git-branch-切换分支">git branch 切换分支</h3>
+                <div class="container"><div class="page single special"><h1 class="single-title pulse faster">Git tricks</h1><div class="content" id="content"><h3 id="git-branch-切换分支">git branch 切换分支</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1

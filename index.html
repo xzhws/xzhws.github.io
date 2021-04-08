@@ -40,7 +40,7 @@
                     </li><li>
                         <a class="menu-item" href="/categories/"> Categories </a>
                     </li><li>
-                        <a class="menu-item" href="/post/toc_test.md"> About </a>
+                        <a class="menu-item" href="/about/"> About </a>
                     </li></ul>
             </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <span class="svg-icon icon-moon"></span>
@@ -65,7 +65,7 @@
                     </li><li>
                         <a class="menu-item" href="/categories/" title="">Categories</a>
                     </li><li>
-                        <a class="menu-item" href="/post/toc_test.md" title="">About</a>
+                        <a class="menu-item" href="/about/" title="">About</a>
                     </li></ul>
             </nav>
             <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
@@ -82,28 +82,30 @@
         </h2><div class="post-meta summary-post-meta"><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-04-07">2021-04-07</time></span><span class="post-category">
                 <a href="/categories/learning/"><i class="svg-icon icon-folder"></i>learning</a>
             </span></div><div class="content summary-content">已完成
- 遇到大整数乘法取模，优先开long long，不然乘法容易爆int。int 4个字节，long 8个字节， long long 16个字节，就算两个int的最大值相乘也不过8个字节，所以开long或者long long足够解决溢出的问题。==再不行记得开unsigned long long== 多行输出，一定要注意数组，变量的重新初始化！！！ 字符串处理时最差时间复杂度注意：子串(最差复杂度O(N^2)) 与子序列（最差复杂度O(2^N)） $\sum_{i=1}^{5}$ c++特定字符串分隔字符stringstream （while(getline(ss,tmp,'/'))） 位运算: mask&amp;(-mask) 可以取到mask右边第一个非0的二进制的位置; 负数的补码：反码（符号位不变）+1 KMP 算法求最短循环节时，注意把最长公共前后缀字符数组D先求出来，然后观察D与要求的内容（比如最小循环节的关系, len-D(len)) 回文字符串的一个特征：假设回文串为P，那么字符串P+'#'+reverse(P) 与KMP 的关系为: D[len-1]=P.length() 滑动窗口模板 题目：leetcode 713. 乘积小于K的子数组  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution { public: //滑动窗口模板题  int numSubarrayProductLessThanK(vector&lt;int&gt;&amp; nums, int k) { int n=nums.</div></div>
+ 遇到大整数乘法取模，优先开long long，不然乘法容易爆int。int 4个字节，long 8个字节， long long 16个字节，就算两个int的最大值相乘也不过8个字节，所以开long或者long long足够解决溢出的问题。==再不行记得开unsigned long long== 多行输出，一定要注意数组，变量的重新初始化！！！ 字符串处理时最差时间复杂度注意：子串(最差复杂度O(N^2)) 与子序列（最差复杂度O(2^N)） c++特定字符串分隔字符stringstream （while(getline(ss,tmp,'/'))） 位运算: mask&amp;(-mask) 可以取到mask右边第一个非0的二进制的位置; 负数的补码：反码（符号位不变）+1 KMP 算法求最短循环节时，注意把最长公共前后缀字符数组D先求出来，然后观察D与要求的内容（比如最小循环节的关系, len-D(len)) 回文字符串的一个特征：假设回文串为P，那么字符串P+'#'+reverse(P) 与KMP 的关系为: D[len-1]=P.length() 滑动窗口模板 题目：leetcode 713. 乘积小于K的子数组  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution { public: //滑动窗口模板题  int numSubarrayProductLessThanK(vector&lt;int&gt;&amp; nums, int k) { int n=nums.</div></div>
 </article>
 
 <div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/algorithm/" style="">algorithm</a></div></div>
 
 <article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
             <a href="/post/git-tricks/" target="_blank">Git tricks</a>
-        </h2><div class="post-meta summary-post-meta"><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-02-28">2021-02-28</time></span></div><div class="content summary-content">[TOC]
-git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地
+        </h2><div class="post-meta summary-post-meta"><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-02-28">2021-02-28</time></span><span class="post-category">
+                <a href="/categories/learning/"><i class="svg-icon icon-folder"></i>learning</a>
+            </span></div><div class="content summary-content">git branch 切换分支 1 2  git branch #查看本地分支 git branch -r #查看远程分支（注意切换到对应的文件夹，与远程分支对应）   注意不要在本地创建分支 而是在远程创建分支 然后git pull到本地
 git status 查看上次是否有修改 1  git status   status 具体内容：
 1 2 3 4 5 6 7  On branch serial0 Changes not staged for commit: (use &#34;git add &lt;file&gt;...&#34; to update what will be committed) (use &#34;git restore &lt;file&gt;...&#34; to discard changes in working directory) modified: test_resnet.py no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)   git diff 查看文件具体修改的不同之处 1 2  git checkout .</div></div>
 </article>
 
-<div class="post-tags-summary-under-footer"></div>
+<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/tools/" style="">tools</a></div></div>
 
 <article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
-            <a href="/post/toc_test/" target="_blank">Toc_test</a>
-        </h2><div class="post-meta summary-post-meta"><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2020-03-04">2020-03-04</time></span></div><div class="content summary-content">[TOC]
-class 1 class 2 class 1 class 2 class 3 </div></div>
+            <a href="/post/1/" target="_blank">Theme Documentation - Content</a>
+        </h2><div class="post-meta summary-post-meta"><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2020-03-05">2020-03-05</time></span><span class="post-category">
+                <a href="/categories/documentation/"><i class="svg-icon icon-folder"></i>documentation</a>
+            </span></div><div class="content summary-content"><p>Find out how to create and organize your content quickly and intuitively in <strong>uBlogger</strong> theme.</p></div></div>
 </article>
 
-<div class="post-tags-summary-under-footer"></div>
+<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/content/" style="">content</a><a class="post-tag-summary" href="/tags/markdown/" style="">Markdown</a></div></div>
 
 </div></div>
                 </main><footer class="footer">
