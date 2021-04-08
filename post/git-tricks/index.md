@@ -60,3 +60,22 @@ git diff temp # 查看本地分支 和tmp分支的不同
 git merge temp # 将tmp分支与本地的master分支合并
 git branch -d temp # 删除一下已经创建的tmp分支
 ```
+
+### git删除远程分支的文件或者文件夹
+假设本地有：master, main两个分支，远程有main分支
+现在删除远程main分支的文件内容
+
+参考方法：[https://blog.csdn.net/qq_25623355/article/details/84787784](https://blog.csdn.net/qq_25623355/article/details/84787784)
+
+```bash
+git fetch origin main:tmp #把远程的main分支 fetch到本地的tmp分支
+git checkout tmp #本地切换到tmp分支
+git rm ***.py #删除tmp分支上的***.py文件
+git rm -r *** #删除tmp分支上的***文件夹
+git commit -m "delete files" #提交修改
+git push origin tmp:main #把本地的tmp分支 重新push到远程的main分支上
+# 切换到本地的其他分支，并删除刚才建立的tmp分支
+git checkout master #本地切换到master分支
+git branch -d tmp #删除刚才建立的tmp分支
+```
+

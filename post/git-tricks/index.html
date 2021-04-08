@@ -28,7 +28,7 @@ git status 查看上次是否有修改 1  git status   status 具体内容：
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xzhws.github.io\/post\/git-tricks\/"
-        },"genre": "post","keywords": "tools","wordCount":  148 ,
+        },"genre": "post","keywords": "tools","wordCount":  204 ,
         "url": "https:\/\/xzhws.github.io\/post\/git-tricks\/","datePublished": "2021-02-28T13:03:42+08:00","dateModified": "2021-02-28T13:03:42+08:00","description": ""
     }
     </script><script type="application/ld+json">
@@ -193,6 +193,34 @@ git fetch origin master:temp <span class="c1">#从远程的origin仓库 把代�
 git diff temp <span class="c1"># 查看本地分支 和tmp分支的不同</span>
 git merge temp <span class="c1"># 将tmp分支与本地的master分支合并</span>
 git branch -d temp <span class="c1"># 删除一下已经创建的tmp分支</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="git删除远程分支的文件或者文件夹">git删除远程分支的文件或者文件夹</h3>
+<p>假设本地有：master, main两个分支，远程有main分支
+现在删除远程main分支的文件内容</p>
+<p>参考方法：<a href="https://blog.csdn.net/qq_25623355/article/details/84787784" target="_blank" rel="noopener noreffer">https://blog.csdn.net/qq_25623355/article/details/84787784</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git fetch origin main:tmp <span class="c1">#把远程的main分支 fetch到本地的tmp分支</span>
+git checkout tmp <span class="c1">#本地切换到tmp分支</span>
+git rm ***.py <span class="c1">#删除tmp分支上的***.py文件</span>
+git rm -r *** <span class="c1">#删除tmp分支上的***文件夹</span>
+git commit -m <span class="s2">&#34;delete files&#34;</span> <span class="c1">#提交修改</span>
+git push origin tmp:main <span class="c1">#把本地的tmp分支 重新push到远程的main分支上</span>
+<span class="c1"># 切换到本地的其他分支，并删除刚才建立的tmp分支</span>
+git checkout master <span class="c1">#本地切换到master分支</span>
+git branch -d tmp <span class="c1">#删除刚才建立的tmp分支</span>
 </code></pre></td></tr></table>
 </div>
 </div></div><div id="comments"><div id="fb-root" class="comment"></div>
