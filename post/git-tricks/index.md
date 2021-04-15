@@ -49,7 +49,7 @@ git push #上传被注释的所有文件
 每次开一个新仓库或者git push 后触发了pipline，需要在gitlab 的setting->member 里面提交容器的申请
 
 ### 主仓库的版本更新后，更新本地的代码
-当上一个版本的代码更新后
+当上一个版本的代码更新后  
 更新本地的master和git仓库的master一致，可以参考方法
 https://www.jianshu.com/p/4c1d3b741b19
 
@@ -62,9 +62,8 @@ git branch -d temp # 删除一下已经创建的tmp分支
 ```
 
 ### git删除远程分支的文件或者文件夹
-假设本地有：master, main两个分支，远程有main分支
-现在删除远程main分支的文件内容
-
+假设本地有：master, main两个分支，远程有main分支  
+现在删除远程main分支的文件内容  
 参考方法：[https://blog.csdn.net/qq_25623355/article/details/84787784](https://blog.csdn.net/qq_25623355/article/details/84787784)
 
 ```bash

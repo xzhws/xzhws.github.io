@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>algorithm - 标签 - xiezhiqiang</title>
+        <title>Algorithm - 标签 - xiezhiqiang</title>
         <link>https://xzhws.github.io/tags/algorithm/</link>
-        <description>algorithm - 标签 - xiezhiqiang</description>
+        <description>Algorithm - 标签 - xiezhiqiang</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 07 Apr 2021 21:56:35 &#43;0800</lastBuildDate><atom:link href="https://xzhws.github.io/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
     <title>Algorithm</title>
     <link>https://xzhws.github.io/post/algorithm/</link>
